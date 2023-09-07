@@ -1,3 +1,78 @@
-.App {
+/* App.css */
+
+.header {
+  background-color: #333;
+  color: #fff;
+  height: 36px;
+}
+
+.header-content {
+  display: flex; /* flexコンテナとして設定 */
+  justify-content: space-between; /* 要素を左右に分散配置 */
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.left-bar {
   text-align: center;
+}
+
+.right-bar {
+  text-align: center;
+}
+
+.top {
+  text-align: center;
+}
+
+.about {
+  background-color: #f7f7f7;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.projects {
+  background-color: #fff;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: row; /* 子要素を横に並べる */
+  flex-wrap: wrap; /* 要素が横幅を超えた場合に折り返す */
+  justify-content: flex-start; /* 開始位置から並べる */
+}
+
+.project-header {
+  text-align: left;
+  padding-left: 2rem;
+}
+.projects h3 {
+  margin-top: 0;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-right: 30px;
+}
+
+.project-image {
+  width: 240px; /* 画像の幅を調整 */
+  height: auto; /* 高さを自動調整（アスペクト比を保つ） */
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+.contact {
+  background-color: #f7f7f7;
+  padding: 2rem;
+  text-align: left;
+}
+
+.contact a{
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
