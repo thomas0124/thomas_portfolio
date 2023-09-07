@@ -1,2 +1,5 @@
 # thomas_portfolio
-ポートフォリオ
+
+# 使用スタック
+- TypeScript
+- React
