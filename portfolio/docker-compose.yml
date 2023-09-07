@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ../portfolio  # プロジェクトディレクトリへのパス
+      dockerfile: Dockerfile  # 使用するDockerfile
+    ports:
+      - "3000:3000"  # ホストポート:コンテナポート
+    volumes:
+      - ../portfolio:/app  # ホストディレクトリをコンテナ内の/appにマウント
+    environment:
+      - NODE_ENV=development  # Node.jsの環境を設定（好みに応じて変更）
+
