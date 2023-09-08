@@ -26,12 +26,49 @@
   text-align: center;
 }
 
+.top span {
+  margin: 0;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.scale-fade-in {
+  animation-name: scaleFadeIn;
+  animation-delay: 1s;
+}
+
+
+@keyframes scaleFadeIn {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
 .about {
   background-color: #f7f7f7;
   padding-right: 2rem;
   padding-left: 2rem;
   padding-bottom: 1rem;
   text-align: center;
+}
+
+.about h2 {
+  text-align: center;
+  text-decoration: underline solid aqua; /* 下線を水色で表示 */
+}
+
+.profile-image {
+  width: 200px; /* 画像の幅を調整 */
+  height: auto; /* 高さを自動調整（アスペクト比を保つ） */
+  margin-bottom: 10px; /* 画像とテキストの間隔を調整 */
+  border-radius: 50%; /* 画像を丸くする（必要に応じて） */
 }
 
 .projects {
@@ -75,4 +112,37 @@
 .contact a{
   margin-right: 20px;
   margin-bottom: 10px;
+}
+
+.slide-in {
+  overflow: hidden; /* テキストが要素からはみ出さないようにするため */
+  white-space: nowrap; /* テキストが改行されないようにするため */
+}
+
+.slide-in p {
+  animation: slideIn 2s ease-in-out; /* アニメーションの設定 */
+  animation-fill-mode: both;
+  display: inline-block;
+  opacity: 0;
+  margin-right: 20px;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%); /* 開始位置を左側に設定 */
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0); /* 終了位置を元の位置に設定 */
+      opacity: 1;
+  }
+}
+
+/* 各テキストを適切な遅延でアニメーションさせる */
+.slide-in p:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide-in p:nth-child(2) {
+  animation-delay: 1s;
 }
